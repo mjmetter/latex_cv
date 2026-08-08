@@ -9,6 +9,14 @@
 \setgithubaccount{https://github.com/mjmetter} %you can play with color of the template (red is also nice..)
 \setthemecolor{blue} %you can play with color of the template (red is also nice..)
 
+% Deliberately no profile picture -- override the template's default header, which includes one.
+\renewcommand\headerview{%
+\begin{center}
+    \name \\[0.05cm]
+    \contact
+\end{center}
+}
+
 \begin{document}
 %Set variables
 %You can add sections, texts, explanations just by copying the style below. Replace the dummy texts "\lipsum[1][x-x]\par" with actual texts.
@@ -19,7 +27,7 @@
 %
 % Summary
 \addblocktext{Summary}{%
-Engineering leader with 15 years of professional experience, including 11 years scaling platform and infrastructure organizations at Bloomreach -- from a single \textasciitilde{}9-person hosting-platform team to a 45+ engineer, three-business-unit organization spanning the Netherlands, India, the US, and Czech Republic/Slovakia. Track record of turning an unmeasured, sub-50\%-margin hosting platform into a 95\%+ margin product by building cost visibility where none existed and negotiating investment directly with finance; consolidating two competing infrastructure generations into one, cloud-migrated and auto-scaled platform; and establishing infra/application ownership boundaries and unified tooling across a 50+ engineer product organization with no prior platform structure. Most recently led company-wide AI coding-tool adoption from pilot to enterprise scale across 255 engineers. Running three structurally distinct products at once surfaced a clear limit to that model: sustaining deep, trust-based platform leadership requires enough focus per product to remain credible in each -- a lesson now shaping a deliberate preference for scope built on one coherent core rather than several unrelated ones.
+Engineering leader with 15 years of professional experience, including 11 years scaling platform and infrastructure organizations at Bloomreach, growing from a single \textasciitilde{}9-person hosting-platform team to a 45+ engineer, three-business-unit organization spanning the Netherlands, India, the US, and Czech Republic/Slovakia. Track record of turning an unmeasured, sub-50\%-margin hosting platform into a 95\%+ margin product by building cost visibility where none existed and negotiating investment directly with finance; consolidating two competing infrastructure generations into one, cloud-migrated and auto-scaled platform; and establishing infra/application ownership boundaries and unified tooling across a 50+ engineer product organization with no prior platform structure. Most recently led company-wide AI coding-tool adoption from pilot to enterprise scale across 255 engineers.
 }
 %
 % Experience
@@ -28,7 +36,7 @@ Engineering leader with 15 years of professional experience, including 11 years 
     \datedexperience{Bloomreach}{Jan 2026-Jul 2026}
     \explanation{Senior Director, AI Adoption, Engineering}
     \explanationdetail{\coloredbullet\ %
-     Asked by the CTO, to whom this role continued reporting directly, to lead company-wide AI coding-tool adoption across \textasciitilde{}255 engineers, after informally piloting Cursor from Feb 2025; formalized the program, deprecated legacy tooling, and rolled out Claude Code from Sep 2025.
+     Asked by the CTO to lead company-wide AI coding-tool adoption across \textasciitilde{}255 engineers, after informally piloting Cursor from Feb 2025; formalized the program, deprecated legacy tooling, and rolled out Claude Code from Sep 2025.
      }    %
     \explanationdetail{\coloredbullet\ %
      Built the training curriculum and adoption program that took usage from pilot to 160+ engineers (\textasciitilde{}63\%) within 15 months of the initial pilot.
@@ -43,7 +51,16 @@ Engineering leader with 15 years of professional experience, including 11 years 
      Took on \href{https://documentation.bloomreach.com/discovery/docs/documentation-overview}{Discovery} (late 2023) and Engagement (Jan 2025) on top of Content, growing into a cross-business-unit remit spanning Amsterdam, Bangalore, Mountain View, and Czech Republic/Slovakia; promoted to Senior Director in Feb 2025 in recognition of the expanded scope.
      }    %
     \explanationdetail{\coloredbullet\ %
-     \textbf{Discovery:} Took over a 7-engineer, 1-manager team (then called ProdOps) that only performed reactive, on-request infrastructure work -- each Discovery application team (50+ engineers total) owned its own infrastructure, observability, and on-call, with no unified cost visibility or usage commitments.
+     \textbf{Content:} Continued to own Content's platform and infrastructure throughout this period, sustaining the 95\%+ margin achieved as Director while scaling Discovery and Engagement in parallel.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{Content:} Migrated Content's infrastructure off a years-long custom fork of nginx onto the standard distribution, after successfully upstreaming the team's contributions into the latest open-source release, eliminating the ongoing burden of maintaining a diverged fork and the security/upgrade risk that came with it.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{Content:} Led the annual ISO and SOC 2 audits for Content, extended to Discovery from 2023: built the evidence base and presented directly to auditors each cycle.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{Discovery:} Took over a 7-engineer, 1-manager team (then called ProdOps) that only performed reactive, on-request infrastructure work; each Discovery application team (50+ engineers total) owned its own infrastructure, observability, and on-call, with no unified cost visibility or usage commitments.
      }    %
     \explanationdetail{\coloredbullet\ %
      \textbf{Discovery:} Ran ProdOps directly for a period and led a monolith-to-Kubernetes migration across Discovery: assessed each application team's services for real migration benefit rather than a blanket rewrite, and moved roughly 10 services onto dedicated Kubernetes clusters for independent scaling and deployment.
@@ -61,19 +78,16 @@ Engineering leader with 15 years of professional experience, including 11 years 
     \datedexperience{Bloomreach}{Apr 2019-Late 2023}
     \explanation{Director of Cloud and Solutions}
     \explanationdetail{\coloredbullet\ %
-     Owned platform, infrastructure, and L2 support for \href{https://documentation.bloomreach.com/content/docs/documentation-overview}{Bloomreach Content}, reporting directly to the CTO -- a reporting line that continued through the Senior Director and AI Adoption roles below.
+     Owned platform, infrastructure, and L2 support for \href{https://documentation.bloomreach.com/content/docs/documentation-overview}{Bloomreach Content}, reporting directly to the CTO, a reporting line that continued through the Senior Director and AI Adoption roles above.
      }    %
     \explanationdetail{\coloredbullet\ %
-     Inherited a platform with no per-customer margin visibility and unmeasured, sub-50\% margin -- all environments, including internal test/dev, ran on COGS, while all engineers ran on OPEX. Built the first margin model, baselined spend, and negotiated with finance that every margin point recovered would fund new infrastructure headcount, turning the team from a cost center into a self-funding one. Margin improved from under 50\% to 95\%+.
+     Inherited a platform with no per-customer margin visibility and unmeasured, sub-50\% margin. All environments, including internal test/dev, ran on COGS, while all engineers ran on OPEX. Built the first margin model, baselined spend, and negotiated with finance that every margin point recovered would fund new infrastructure headcount, turning the team from a cost center into a self-funding one. Margin improved from under 50\% to 95\%+.
      }    %
     \explanationdetail{\coloredbullet\ %
-     Consolidated two competing hosting generations -- OD1 (a custom on-prem VM platform for \textasciitilde{}50 customers) and OD2 (an AWS-based platform for \textasciitilde{}10 customers) -- into one: migrated all OD1 customers onto OD2, moved OD2 from self-hosted Kubernetes to EKS, and added horizontal and vertical auto-scaling. Replaced per-stack logging and monitoring (no tracing existed previously) with a centralized observability platform. Restructured a single \textasciitilde{}9-person team split across two hosting generations into functionally-aligned platform, SRE/observability, and customer-facing L2 teams; grew the full Content org to 24 (11 application engineers, 4 platform, 4 infrastructure support, 2 SRE, 3 managers).
+     Consolidated two competing hosting generations (OD1, a custom on-prem VM platform for \textasciitilde{}50 customers, and OD2, an AWS-based platform for \textasciitilde{}10 customers) into one: migrated all OD1 customers onto OD2, moved OD2 from self-hosted Kubernetes to EKS, and added horizontal and vertical auto-scaling. Replaced per-stack logging and monitoring (no tracing existed previously) with a centralized observability platform. Restructured a single \textasciitilde{}9-person team split across two hosting generations into functionally-aligned platform, SRE/observability, and customer-facing L2 teams; grew the full Content org to 24 (11 application engineers, 4 platform, 4 infrastructure support, 2 SRE, 3 managers).
      }    %
     \explanationdetail{\coloredbullet\ %
-     Turned around three underperforming Support engineers who were at risk of being let go by moving them into engineering roles; one grew into a successful Engineering Manager and another into a key Staff Engineer.
-     }    %
-    \explanationdetail{\coloredbullet\ %
-     Hired two junior infrastructure engineers straight from Professional Services backgrounds and developed both into Staff Engineers over approximately five years.
+     Developed engineering talent internally: turned around three underperforming Support engineers at risk of being let go by moving them into engineering roles (one became an Engineering Manager, another a Staff Engineer), and grew two junior hires from Professional Services backgrounds into Staff Engineers over roughly five years.
      }    %
     %
     \datedexperience{Bloomreach}{Jan 2017-Apr 2019}
@@ -103,19 +117,19 @@ Engineering leader with 15 years of professional experience, including 11 years 
 % Skills
 \section{Skills}
     %
-    \newcommand{\skillone}{\createskill{Platform \& Org Design}{Platform Strategy \& Operating Models \cpshalf Cross-BU Governance \& Adoption \cpshalf Multi-Region Org Design (EU/US/APAC)}}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Platform \& Org Design}}: Platform Strategy \& Operating Models \cpshalf Cross-BU Governance \& Adoption \cpshalf Multi-Region Org Design (EU/US/APAC) \cpshalf Compliance \& Security Audit Leadership (ISO, SOC 2)}
     %
-    \newcommand{\skilltwo}{\createskill{Infrastructure}{Cloud Migration \& Consolidation (K8s \ensuremath{\rightarrow} EKS) \cpshalf Observability \& Cost-Visibility Systems \cpshalf CI/CD}}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Infrastructure}}: Cloud Migration \& Consolidation (K8s \ensuremath{\rightarrow} EKS) \cpshalf Distributed Systems \& High-Throughput Platforms \cpshalf Observability \& Cost-Visibility Systems \cpshalf CI/CD}
     %
-    \newcommand{\skillthree}{\createskill{Cost \& Margin Ownership}{COGS/OPEX Modeling \cpshalf AWS Billing \& Cost Monitoring \cpshalf Margin-Funded Headcount Negotiation}}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Cost \& Margin Ownership}}: COGS/OPEX Modeling \cpshalf AWS Billing \& Cost Monitoring \cpshalf Margin-Funded Headcount Negotiation}
     %
-    \newcommand{\skillfour}{\createskill{People Management}{Hiring \& Developing Senior/Staff Engineers \cpshalf 5x5 Communication \cpshalf Conflict Resolution}}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{People Management}}: Manager-of-Managers Leadership \cpshalf Hiring \& Developing Senior/Staff Engineers \cpshalf 5x5 Communication \cpshalf Conflict Resolution}
     %
-    \newcommand{\skillfive}{\createskill{Change Management}{Enterprise Tooling Adoption \cpshalf AI-Coding-Tool Rollout \cpshalf Executive Stakeholder Management}}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Change Management}}: Enterprise Tooling Adoption \cpshalf AI-Coding-Tool Rollout \cpshalf Executive Stakeholder Management}
     %
-    \newcommand{\skillsix}{\createskill{Languages}{\textbf{\emph{Native:}} \ \  Dutch \ \ \textbf{\emph{Fluent:}} \ \ English }}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{AI / ML Foundations}}: PhD/MSc in AI (Real-Time Pattern Recognition \& Tracking) \cpshalf MLOps Oversight \cpshalf AI Cost \& Productivity Dashboard Design}
     %
-    \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive, \skillsix}
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Languages}}: \textbf{\emph{Native:}} \ \  Dutch \ \ \textbf{\emph{Fluent:}} \ \ English}
 %
 % Experience
 %
@@ -127,7 +141,7 @@ Engineering leader with 15 years of professional experience, including 11 years 
      Not completed
      }
      \explanationdetail{\coloredbullet\ %
-     \textbf{Selected publications:} \href{https://doi.org/10.1016/j.cviu.2012.11.004}{``Track based relevance feedback for tracing persons in surveillance videos''}, \textit{Computer Vision and Image Understanding}, 2013; \href{https://doi.org/10.1145/1877972.1877985}{``Semi-interactive tracing of persons in real-life surveillance data''}, ACM MiFor, 2010; ``Color based tracing in real-life surveillance data,'' \textit{Transactions on Data Hiding and Multimedia Security V}, 2010.
+     \textbf{Selected publications:} three peer-reviewed papers on real-time person-tracking and pattern recognition in surveillance video (2010--2013).
      }
     \datedexperience{University of Amsterdam}{2004-2006}
     \explanation{M.Sc in Artificial Intelligence}
@@ -141,15 +155,9 @@ Engineering leader with 15 years of professional experience, including 11 years 
      }
 %
 %Board and Volunteer Leadership
-\section{Board \& Volunteer Leadership}
-    \datedexperience{AMVJ}{2013-2017}
-    \explanation{Vice President, Field Hockey Organization}
-    %
-    \datedexperience{DEV}{2022-2024}
-    \explanation{President, Gymnastics Organization}
-    %
-    \datedexperience{Oostzaan Municipal Council}{2017-2019, 2025-present}
-    \explanation{Council Assistant}
+\addblocktext{Board \& Volunteer Leadership}{%
+Vice President, AMVJ Field Hockey Organization (2013--2017) \cpshalf President, DEV Gymnastics Organization (2022--2024) \cpshalf Council Assistant, Oostzaan Municipal Council (2017--2019, 2025--present).
+}
 %
 %Footnote
 \createfootnote
