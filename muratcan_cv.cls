@@ -5,6 +5,7 @@
 \author{Murat Can Karacabey}
 \RequirePackage[dvipsnames]{xcolor} % moved here I guess article class causes option clash with xcolor if used after loading the class
 \LoadClass[11pt]{article}
+\RequirePackage{indentfirst} % standard classes suppress indentation on the paragraph immediately after a \section heading; this restores it so the first \explanationdetail bullet in a section indents the same as the rest
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{muratcan_cv}[2020/04/15 Muratcan CV Class]
 \RequirePackage[sfdefault]{noto}
@@ -147,7 +148,7 @@ Position: & \@claimedposition \\
 }
 
 \newcommand{\explanationdetail}[1]{%
-    \indent \begin{minipage}{0.96\linewidth} \footnotesize #1 \end{minipage} \\[0.1cm]
+    \indent \begin{minipage}{0.96\linewidth} \hangindent=1.2em\hangafter=1 \footnotesize #1 \end{minipage} \\[0.1cm]
 }
 
 \newcommand{\itemwithtext}[1]{%
