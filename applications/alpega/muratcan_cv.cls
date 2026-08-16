@@ -14,6 +14,9 @@
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
 \RequirePackage{fontspec}
+\ifdefined\XeTeXgenerateActualText
+  \XeTeXgenerateActualText=1 % without this, PDF text-extraction (ATS parsers, copy-paste) can insert spurious spaces around punctuation wherever a letter+punctuation pair gets a kerning adjustment -- this makes the PDF's text layer match the real input text regardless of ligatures/kerning
+\fi
 \RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
