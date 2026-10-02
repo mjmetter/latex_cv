@@ -1,0 +1,175 @@
+\documentclass{muratcan_cv}
+
+\setname{Michael}{Metternich}
+\setaddress{Amsterdam/Nederland}
+\setmobile{+31 6 1712 8681}
+\setmail{michael.j.metternich@gmail.com}
+\setposition{Platform \& Infrastructure Engineering Leader} %ignored for now
+\setlinkedinaccount{https://www.linkedin.com/in/michaelmetternich/}
+\setgithubaccount{https://github.com/mjmetter}
+\setthemecolor{blue}
+
+% Deliberately no profile picture -- override the template's default header, which includes one.
+\renewcommand\headerview{%
+\begin{center}
+    \name \\[0.05cm]
+    {\small Platform \& Infrastructure Engineering Leader} \\[0.05cm]
+    \contact
+\end{center}
+}
+
+\begin{document}
+\headerview
+\vspace{1ex}
+%
+% Samenvatting
+\addblocktext{Samenvatting}{%
+Engineering leider met 15 jaar werkervaring, waarvan 11 jaar bij Bloomreach in het opschalen van platform- en infrastructuurorganisaties. Mijn organisatie groeide van één hostingplatformteam van \textasciitilde{}9 mensen naar een organisatie van 45+ engineers, verdeeld over drie business units in Nederland, India, de VS en Tsjechië/Slowakije. In 2025 nam ik de volledige verantwoordelijkheid over voor Bloomreach Content, inclusief applicatie-engineering: een platform dat complete klantwebsites hostte, onder meer voor de Nederlandse overheid en het Britse Met Office.
+\par\vspace{0.5ex}
+Ik bouwde kostentransparantie op waar die ontbrak, voor drie productlijnen met samen bijna \$2M per maand aan cloudkosten: die van Discovery bleven twee jaar gelijk bij een groeiend klantenbestand en daalden daarna met \textasciitilde{}17\%; voor Content onderhandelde ik rechtstreeks met finance over investeringen, waarmee een niet-gemeten hostingplatform met een marge onder de 50\% een product met 95\%+ marge werd. Meest recent leidde ik de bedrijfsbrede invoering van AI-coding-tools, van pilot tot meer dan 160 van de 255 engineers.
+}
+%
+% Werkervaring
+\section{Werkervaring}
+    %
+    \datedexperience{Bloomreach}{jan 2026-jun 2026}
+    \explanation{Senior Director of Engineering (AI Adoption)}
+    \explanationdetail{\coloredbullet\ %
+     Leidde de bedrijfsbrede invoering van AI-coding-tools bij \textasciitilde{}255 engineers, met directe rapportage aan de CTO; vanaf jan 2026 een fulltime mandaat, na een start naast de vorige rol (informele Cursor-pilot vanaf feb 2025, uitrol van Claude Code vanaf sep 2025). Formaliseerde het programma en faseerde GitHub Copilot uit.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Bouwde het trainingscurriculum en adoptieprogramma waarmee het gebruik binnen 15 maanden groeide van pilot tot 160+ engineers (\textasciitilde{}63\%).
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Hield Content (platform, infrastructuur en applicatie-engineering) naast het AI-mandaat; droeg Discovery en Engagement bij de start daarvan over aan een collega.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     In dienst tot en met 31 oktober 2026; beschikbaar vanaf 1 november 2026, eerder starten is mogelijk.
+     }    %
+    %
+    \datedexperience{Bloomreach}{eind 2023-jan 2026}
+    \explanation{Director of Engineering \ensuremath{\rightarrow} Senior Director of Engineering (feb 2025)}
+    \explanationdetail{\coloredbullet\ %
+     Breidde de scope uit met Discovery (eind 2023) en Engagement (jan 2025), naast Content, en hield de 95\%+ marge van Content vast; in feb 2025 gepromoveerd tot Senior Director vanwege de uitgebreide scope.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Hield maandelijkse SLA-reviews voor alle drie de producten; Content haalde gemiddeld meer dan 99,99\% uptime bij een SLA van 99,99\%.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{\href{https://xmdocumentation.bloomreach.com/}{Content}} (Amsterdam)
+     }    %
+    \explanationsubdetail{%
+     Maakte van Content één engineeringorganisatie: nam de applicatie-engineering over (Java-codebase; 9 engineers, 1 manager) toen de collega-directeur die dit beheerde in jan 2025 vertrok, en verving de manager door een nieuw aangenomen directeur die aan mij rapporteerde.
+     }    %
+    \explanationsubdetail{%
+     Stapte over van een jarenlang onderhouden eigen nginx-fork naar de standaarddistributie, nadat de bijdragen van het team upstream waren opgenomen; dat haalde de onderhoudslast en het security- en upgraderisico van een afwijkende fork weg.
+     }    %
+    \explanationsubdetail{%
+     Leidde de jaarlijkse ISO- en SOC 2-audits (vanaf 2023 uitgebreid naar Discovery): bouwde het bewijsmateriaal op en presenteerde elke cyclus zelf aan de auditors.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{\href{https://documentation.bloomreach.com/discovery/docs/documentation-overview}{Discovery}} (Amsterdam, Bangalore, Mountain View)
+     }    %
+    \explanationsubdetail{%
+     Erfde een reactief infrastructuurteam dat op verzoek werkte (ProdOps, 7 engineers, 1 manager), terwijl elk applicatieteam (50+ engineers in totaal) zelf infrastructuur, observability en on-call beheerde.
+     }    %
+    \explanationsubdetail{%
+     Bouwde in 2024 de business case voor centraal platformeigenaarschap en migreerde, met steun van de CFO, de applicatieteams naar een gestandaardiseerd platform: gescheiden AWS-accounts, Terraform, volledige auto-scaling en heldere eigenaarschapsgrenzen.
+     }    %
+    \explanationsubdetail{%
+     Leidde ProdOps enige tijd zelf en verhuisde circa 10 services van AWS-VM's naar eigen Kubernetes-clusters, waarbij ik per service beoordeelde of migratie echt iets opleverde in plaats van alles te herschrijven.
+     }    %
+    \explanationsubdetail{%
+     Voerde centrale observability in, inclusief distributed tracing (voorheen afwezig), en kostenbewaking van AWS-commitments met een maandelijkse review met de AWS TAM: hield de cloudkosten twee jaar stabiel bij een groeiend klantenbestand en bracht ze daarna met \textasciitilde{}17\% omlaag. Liet het platformteam groeien van 7 naar 13 engineers (2 managers).
+     }    %
+    \explanationsubdetail{%
+     Eigenaar van de infrastructuur- en observabilitylaag van MLOps (Kubernetes, monitoring, betrouwbaarheid van pipelines), legde de werkafspraken met de ML-engineeringlead vast en verbeterde de snelheid en het resourcegebruik van pipelines; monitoring van model drift en modelprestaties bleef bij het ML-team.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     \textbf{\href{https://documentation.bloomreach.com/engagement/docs/documentation-overview}{Engagement}} (Tsjechië/Slowakije)
+     }    %
+    \explanationsubdetail{%
+     Liet het GCP-infrastructuurteam uit de overname van Exponia groeien van 4 engineers met een meewerkend manager naar 6 met een dedicated manager.
+     }    %
+    \explanationsubdetail{%
+     Beperkte de groei van de GCP-kosten tot \textasciitilde{}17\% terwijl de omzet jaarlijks met 30\%+ groeide.
+     }    %
+    %
+    \datedexperience{Bloomreach}{apr 2019-eind 2023}
+    \explanation{Director of Engineering}
+    \explanationdetail{\coloredbullet\ %
+     Eigenaar van platform, infrastructuur en L2-support voor \href{https://xmdocumentation.bloomreach.com/}{Bloomreach Content}, met directe rapportage aan de CTO (een rapportagelijn die doorliep in de rollen hierboven).
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Bouwde het eerste margemodel voor een platform met een niet-gemeten marge onder de 50\% (alle omgevingen, ook interne test/dev, draaiden op COGS) en sprak met finance af dat teruggewonnen marge nieuwe infrastructuurcapaciteit zou financieren, waardoor het team zichzelf bekostigde; de marge steeg naar 95\%+ en de cloudkosten daalden \textasciitilde{}40\% ten opzichte van de piek.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Voegde twee concurrerende hostinggeneraties samen: migreerde \textasciitilde{}50 klanten van een eigen on-prem VM-platform naar het nieuwere AWS-platform, verhuisde dat platform van zelfbeheerde Kubernetes naar EKS met volledige auto-scaling en verving logging per stack door centrale observability.
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Herstructureerde één team van \textasciitilde{}9 mensen tot platform-, SRE/observability- en L2-teams, gegroeid naar 13 (applicatie-engineering bleef in die periode bij een collega-directeur).
+     }    %
+    \explanationdetail{\coloredbullet\ %
+     Verplaatste drie Support engineers die hun baan dreigden te verliezen naar engineeringrollen (een werd EM, een ander Staff Engineer), en liet twee junior Professional Services-medewerkers doorgroeien tot Staff Engineer.
+     }    %
+    %
+    \datedexperience{Bloomreach}{jan 2017-apr 2019}
+    \explanation{Engineering Manager}
+    \explanationdetail{\coloredbullet\ %
+     Gaf leiding aan een op frontend gericht team van 6 engineers bij Hippo, na de overname door Bloomreach.
+     }    %
+    %
+    \datedexperience{Hippo, a Bloomreach Company}{apr 2015-jan 2017}
+    \explanation{Support Engineer \ensuremath{\rightarrow} Professional Services Consultant}
+    \explanationdetail{\coloredbullet\ %
+     Voerde klantimplementaties van Hippo CMS uit, na een korte start in Support.
+     }    %
+    %
+    %
+    \datedexperience{Oelan}{aug 2013-apr 2015}
+    \explanation{Full-Stack Engineer (IT Specialist)}
+    \explanationdetail{\coloredbullet\ %
+     Enige engineer van \href{https://www.privacyperfect.com}{PrivacyPerfect}, een applicatie voor het bijhouden van PII-gebruik voor een klant in de juridische sector.
+     }    %
+    %
+    \datedexperience{Ordina}{aug 2011-aug 2013}
+    \explanation{Java Developer}
+    \explanationdetail{\coloredbullet\ %
+     Gedetacheerd bij Rabobank: bouwde portlets op de website van Interpolis waarmee klanten hun verzekeringsdekking konden controleren, en vormde het ontwerp samen met de product owner, de business en de architect.
+     }
+%
+% Vaardigheden
+\section{Vaardigheden}
+    %
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Platform \& Infrastructuur}}: Platformstrategie \& operating models \cpshalf Cloudmigratie \& -consolidatie (zelfbeheerde K8s \ensuremath{\rightarrow} EKS) \cpshalf Observability \& kostentransparantie \cpshalf CI/CD}
+    %
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Organisatie \& Kostenleiderschap}}: Leidinggeven aan managers \cpshalf Multi-regio organisatieontwerp (EU/US/APAC) \cpshalf COGS/OPEX-modellering \& margeverbetering \cpshalf Leiding aan compliance- \& securityaudits (ISO, SOC 2)}
+    %
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Verandering \& AI-adoptie}}: Enterprise change management \cpshalf Uitrol van AI-tooling \cpshalf MLOps-infrastructuur \& operating model}
+    %
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Technologieën}}: AWS \cpshalf GCP \cpshalf Kubernetes (zelfbeheerd, EKS) \cpshalf Terraform \cpshalf OpenTelemetry (Honeycomb) \cpshalf Datadog \cpshalf Grafana (zelfbeheerd) \cpshalf Prometheus \cpshalf Jenkins \cpshalf GitLab Runners \cpshalf nginx}
+    %
+    \explanationdetail{\coloredbullet\ \textsc{\textbf{Talen}}: \textbf{\emph{Moedertaal:}} \ \  Nederlands \ \ \textbf{\emph{Vloeiend:}} \ \ Engels}
+%
+%Opleiding
+\section{Opleiding}
+    \datedexperience{Universiteit van Amsterdam}{2007-2011}
+    \explanation{Promotieonderzoek (niet afgerond) - Titel: Crime reconstruction in real-life surveillance videos}
+     \explanationdetail{\coloredbullet\ %
+     Drie peer-reviewed publicaties over real-time persoonstracking en patroonherkenning in bewakingsvideo (2010--2013).
+     }
+    \datedexperience{Universiteit van Amsterdam}{2000-2006}
+    \explanation{B.Sc. \& M.Sc. Kunstmatige Intelligentie}
+    \explanationdetail{\coloredbullet\ %
+     Internationale onderzoeksmaster autonome systemen (incl. tien maanden traineeship bij Logica), volgend op een algemene bachelor bij de afdeling informatica.
+     }
+%
+%Bestuurs- en vrijwilligerswerk
+\addblocktext{Bestuurs- \& vrijwilligerswerk}{%
+Vicevoorzitter, hockeyvereniging AMVJ (2013--2017) \cpshalf Voorzitter, gymnastiekvereniging DEV (2022--2024) \cpshalf Raadsassistent, gemeenteraad Oostzaan (2017--2019, 2025--heden).
+}
+%
+%Footnote -- disabled: the \footnote-based macro forces a near-blank trailing
+%page once content is dense enough (see latex_cv/README.md page-fit exception).
+%\createfootnote
+\end{document}

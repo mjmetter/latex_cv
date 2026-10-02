@@ -118,7 +118,7 @@ Position: & \@claimedposition \\
 %colorfulpipeseperator
 
 \newcommand{\cps}{{\color{\@themecolor} \quad\textbar\quad}}
-\newcommand{\cpshalf}{{\color{\@themecolor} \hspace{0.2em}\textbar\hspace{0.2em}}}
+\newcommand{\cpshalf}{\unskip\nobreak\hspace{0.2em}{\color{\@themecolor}\textbar}\hspace{0.2em}} % no line break before the pipe, so a wrapped line never starts with one
 
 \newcommand{\coloredbullet}{{\color{\@themecolor} \textbullet}}
 
@@ -143,6 +143,7 @@ Position: & \@claimedposition \\
 }
 
 \newcommand{\datedexperience}[2]{%
+  \noindent % the first entry after a \section starts a new paragraph and (via indentfirst) got an extra \parindent; later entries follow a \\ and didn't
   \begin{small} \mbox { \hspace{1em} \scshape \textbf{#1} } \end{small} \hfill \datetext{#2}\\[0.01cm] %
 }
 
@@ -154,13 +155,21 @@ Position: & \@claimedposition \\
     \indent \begin{minipage}{0.96\linewidth} \hangindent=1.2em\hangafter=1 \footnotesize #1 \end{minipage} \\[0.1cm]
 }
 
+% Second-level bullet: nested under an \explanationdetail heading bullet (e.g. per-product detail within one role).
+% Hanging indent is measured from the marker so wrapped lines align with the text, not the dash.
+\newlength{\subbulletwidth}
+\newcommand{\coloredsubbullet}{{\color{\@themecolor}\textendash}}
+\newcommand{\explanationsubdetail}[1]{%
+    \indent\hspace{1em}\begin{minipage}{\dimexpr0.96\linewidth-1em\relax}\footnotesize\settowidth{\subbulletwidth}{\coloredsubbullet\ }\hangindent=\subbulletwidth\hangafter=1 \coloredsubbullet\ #1\end{minipage}\\[0.05cm]
+}
+
 \newcommand{\itemwithtext}[1]{%
     \begin{minipage}{\linewidth} \footnotesize \item #1 \end{minipage}
 }
 
 \newcommand{\addblocktext}[2]{%
-  \section{#1} 
-  \indent \explanationdetail{\hspace{4ex} #2}
+  \section{#1}
+  \explanationdetail{\hangindent=0pt #2} % single indent, no first-line or hanging indent: aligns prose blocks (Summary, Board) flush with the Experience bullets
 }
 
 \newcommand\createskill[2]{%
