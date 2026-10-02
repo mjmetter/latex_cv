@@ -23,9 +23,9 @@
 - You can change the header content with the ```set..``` commands in the beginning and also the the color of the theme.
 - Just replace the actual texts with your related education/experience and also don't forget to replace ```\lipsum[1][1-12]\par``` with actual texts. That package is just used for illustration reasons. Since I am not sure what to write to those parts of the resume right now.
   
-### My workflow: tracking real applications
+### My résumé and cover letter
 
-Beyond the template itself, I use this repo to track my own job search in the open. `CV.tex` and `CoverLetter.tex` at the root stay generic (the latter is a placeholder, not a live letter). Each real application gets its own folder under `applications/<company>/`, with its own `CV.tex`, `CoverLetter.tex`, and a copy of `muratcan_cv.cls` so it compiles standalone. When an application resolves (offer, rejection, withdrawal), the folder is removed from the working tree with `git rm` -- the record stays in commit history for anyone curious where I've applied, but the current directory only shows what's actually live.
+Beyond the template itself, this repo holds my own general résumé and cover letter, in English (`CV.tex`, `CoverLetter.tex`) and Dutch (`CV-nl.tex`, `CoverLetter-nl.tex`). Versions tailored to specific applications are kept locally and are not published.
 
 ### TODOS
 

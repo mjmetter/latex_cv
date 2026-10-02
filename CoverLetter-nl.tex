@@ -1,0 +1,62 @@
+\documentclass{muratcan_cv}
+
+\setname{Michael}{Metternich}
+\setaddress{Amsterdam/Nederland}
+\setmobile{+31 6 1712 8681}
+\setmail{michael.j.metternich@gmail.com}
+\setposition{Platform \& Infrastructure Engineering Leader} %ignored for now
+\setlinkedinaccount{https://www.linkedin.com/in/michaelmetternich/}
+\setgithubaccount{https://github.com/mjmetter}
+\setthemecolor{blue}
+
+% Deliberately no profile picture -- override the template's default header, which includes one.
+\renewcommand\headerview{%
+\begin{center}
+    \name \\[0.05cm]
+    {\small Platform \& Infrastructure Engineering Leader} \\[0.05cm]
+    \contact
+\end{center}
+}
+
+% Dutch labels and salutation (the class hardcodes "Company:", "Position:" and "Dear").
+\makeatletter
+\renewcommand\coverlettersubview{%
+\begin{tabular}{>{\scshape \bfseries \color{\@themecolor}}l  >{\small }l}
+Bedrijf: & \@companyname \\
+Functie: & \@claimedposition \\
+\end{tabular}
+}
+\renewcommand\coverletter[1]{%
+\\  \coverlettersubview
+\section{} \vspace{1ex}
+\textbf{Beste \@contactperson, \\[0.1cm]}
+  #1
+}
+\makeatother
+
+% Dutch base text for interim/contract bureau registration letters (not tied to a
+% specific client or role). Copy into applications/<bureau>/ and fill in
+% setcompanyname before sending.
+\setcompanyname{Bedrijfsnaam}
+\setcontactperson{lezer}
+\setclaimedposition{Interim- / contractopdrachten engineering leadership}
+
+\begin{document}
+\headerview
+\vspace{1ex}
+\coverletter{ %
+Graag schrijf ik me in als kandidaat voor interim- en contractopdrachten in engineering leadership. In elf jaar bij Bloomreach heb ik platform-, infrastructuur- en, sinds 2025, applicatie-engineeringorganisaties opgebouwd en geleid in drie business units: van één team van ongeveer negen mensen tot een organisatie van 45+ engineers in Nederland, India, de VS en Tsjechië/Slowakije.
+
+Steeds ging het om hetzelfde probleem op een andere plek: infrastructuur en teams die versnipperd waren gegroeid, en die samenbrengen tot één platform met helder eigenaarschap en kosteninzicht. Ik bouwde het eerste margemodel voor een platform zonder kosteninzicht per klant en onderhandelde daarover zelf met finance, waarmee een niet-gemeten marge onder de 50\% groeide naar 95\%+. Een vergelijkbaar verandertraject leidde ik bij teams die niet aan mij rapporteerden, door infrastructuur en observability te standaardiseren waar die ontbraken.
+
+Meest recent leidde ik de bedrijfsbrede invoering van AI-coding-tools bij Bloomreach, van een informele pilot tot meer dan 160 van de 255 engineers in vijftien maanden, inclusief de kosten- en productiviteitsdashboards waarmee de uitgaven werden bewaakt.
+
+Ik woon in de regio Amsterdam en ben beschikbaar vanaf 1 november 2026; eerder starten is mogelijk. Ik zoek interim- of contractopdrachten op het niveau van VP Engineering, Head of Platform of Director of Engineering, vooral rond platformmodernisering, kosten- en margediscipline of organisatieverandering, waar een heldere diagnose en een snelle, geloofwaardige start belangrijker zijn dan een meerjarige aanloop.
+
+Ik hoor graag wat u op dit moment in de markt ziet.
+
+\vspace{1ex}
+Met vriendelijke groet, \\
+Michael Metternich
+}
+\end{document}
